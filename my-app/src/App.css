@@ -1,0 +1,134 @@
+/* Стили для контейнера страницы */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Шапка сайта */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+/* Контейнер для кнопок авторизации в шапке (справа сверху) */
+.auth-container {
+  display: flex;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Округлённые кнопки в шапке */
+.header-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Делает кнопки овальными/округлёнными */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-login {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-register {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-register:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Контейнер для страниц регистрации и входа (по центру экрана) */
+.auth-page-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.auth-page-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.auth-page-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.auth-page-container input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Кнопка отправки формы внутри страницы */
+.auth-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.auth-page-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.auth-page-container a {
+  color: #007bff;
+  text-decoration: underline;
+  font-weight: 600;
+}
