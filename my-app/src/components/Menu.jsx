@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Cart from './Cart';
 import './Menu.css';
 
-// Компонент модального окна заказа (простой, без лишних зависимостей)
 const OrderModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
@@ -55,7 +54,7 @@ const coffeeAndDrinks = [
   { id: 3, name: 'Латте', price: 250, desc: 'Мягкий кофейный напиток', image: 'https://avatars.mds.yandex.net/i?id=7c049fa6190a35e52018cb56bb440bde_l-8257574-images-thumbs&n=13' },
   { id: 4, name: 'Мокко', price: 350, desc: 'Кофе, шоколад и молоко', image: 'https://avatars.mds.yandex.net/i?id=356c3f006b9a32028b0f4a1a07e0d21b_l-7092330-images-thumbs&n=13' },
   { id: 5, name: 'Американо', price: 350, desc: 'Крепкий кофе', image: 'https://avatars.mds.yandex.net/i?id=8d0ecaceff29d1661416b8dd06ddb905_l-12753003-images-thumbs&n=13' },
-  { id: 6, name: 'Какао', price: 150, desc: 'Шоколад и молоко', image: 'https://jz9czo0xs6.ru.scalesta-cdn.com/2IKuC_ETZAz4z9wijYuebPHejlo=/filters:format(webp)/https://complexbar.ru/images/blog/246/pryaniy-kakao.jpg' },
+  { id: 6, name: 'Какао', price: 150, desc: 'Шоколад и молоко', image: 'https://jz9czo0xs6.ru.scalesta-cdn.com/2IKuC_ETZAz4z9wijYuebPHejlo=/filters:format(webp)/https%3A%2F%2Fcomplexbar.ru%2Fimages%2Fblog%2F246%2Fpryaniy-kakao.jpg' },
 ];
 
 const pastries = [
@@ -71,7 +70,6 @@ const Menu = () => {
   const [cart, setCart] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Добавляем товар: если такой уже есть — увеличиваем quantity, иначе добавляем новый
   const addToCart = (item) => {
     setCart((prev) => {
       const existing = prev.find((i) => i.id === item.id);
@@ -89,7 +87,7 @@ const Menu = () => {
   };
 
   const clearCart = () => {
-    // Здесь можно добавить отправку заказа на сервер
+
     setCart([]);
     setIsModalOpen(true);
   };

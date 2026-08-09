@@ -4,7 +4,6 @@ import './Menu.css';
 const Cart = ({ cart, onRemoveItem, onClearCart, onUpdateQuantity }) => {
   const total = cart.reduce((sum, item) => sum + (item.price || 0) * (item.quantity || 1), 0);
 
-  // Модальное подтверждение очистки
   const [showConfirm, setShowConfirm] = useState(false);
 
   const handleClearCart = () => {
@@ -48,7 +47,6 @@ const Cart = ({ cart, onRemoveItem, onClearCart, onUpdateQuantity }) => {
             <div className="cart-actions">
               <span className="cart-price">{item.price} ₽</span>
 
-              {/* Кнопки количества (если поддерживается) */}
               {onUpdateQuantity && (
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <button
@@ -89,7 +87,6 @@ const Cart = ({ cart, onRemoveItem, onClearCart, onUpdateQuantity }) => {
         Оформить заказ
       </button>
 
-      {/* Модальное окно подтверждения */}
       {showConfirm && (
         <div style={{
           position: 'fixed',

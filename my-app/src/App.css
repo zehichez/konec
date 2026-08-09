@@ -1,4 +1,3 @@
-/* Стили для контейнера страницы */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -6,7 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Шапка сайта */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -33,17 +31,15 @@
   color: #007bff;
 }
 
-/* Контейнер для кнопок авторизации в шапке (справа сверху) */
 .auth-container {
   display: flex;
-  gap: 10px; /* Расстояние между кнопками */
+  gap: 10px; 
 }
 
-/* Округлённые кнопки в шапке */
 .header-btn {
   padding: 10px 20px;
   border: none;
-  border-radius: 25px; /* Делает кнопки овальными/округлёнными */
+  border-radius: 25px; 
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -71,7 +67,7 @@
   transform: translateY(-2px);
 }
 
-/* Контейнер для страниц регистрации и входа (по центру экрана) */
+
 .auth-page-container {
   max-width: 400px;
   margin: 50px auto;
@@ -103,7 +99,7 @@
   border-color: #007bff;
 }
 
-/* Кнопка отправки формы внутри страницы */
+
 .auth-submit-btn {
   width: 100%;
   padding: 12px;

@@ -10,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Вариант 1: сплошной тёплый фон (если нет картинки) */
 .hero::before {
   content: '';
   position: absolute;
@@ -23,14 +22,6 @@
   z-index: 1;
 }
 
-/* Вариант 2: фоновое фото (раскомментируй, если хочешь картинку) */
-/*
-.hero {
-  background-image: url('/images/hero-coffee.jpg');
-  background-size: cover;
-  background-position: center;
-}
-*/
 
 .hero-content {
   position: relative;
@@ -60,7 +51,7 @@
 .cta-button {
   display: inline-block;
   padding: 16px 36px;
-  background-color: #d4af37; /* тёплый золотой цвет кнопки */
+  background-color: #d4af37;
   color: #2c1e16;
   border: none;
   border-radius: 50px;
@@ -84,7 +75,7 @@
   transform: translateY(0);
 }
 
-/* Анимация появления */
+
 .hero-content {
   opacity: 0;
   transform: translateY(20px);
@@ -98,7 +89,7 @@
   }
 }
 
-/* Адаптив */
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.4rem;

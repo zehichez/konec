@@ -1,6 +1,6 @@
 .contact-section {
   padding: 60px 20px;
-  background-color: #f9f7f3; /* тёплый нейтральный фон */
+  background-color: #f9f7f3; 
   color: #333;
 }
 
@@ -24,7 +24,6 @@ h2 {
   gap: 30px;
 }
 
-/* Блок с контактами */
 .contact-info-block {
   background: #fff;
   padding: 24px;
@@ -45,7 +44,6 @@ h2 {
   line-height: 1.5;
 }
 
-/* Форма обратной связи */
 .contact-form-block {
   background: #fff;
   padding: 28px;
@@ -115,7 +113,6 @@ h2 {
   transform: scale(0.98);
 }
 
-/* Адаптив */
 @media (min-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;

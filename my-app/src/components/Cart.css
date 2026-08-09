@@ -93,7 +93,6 @@
   transform: scale(0.98);
 }
 
-/* Состояние пустой корзины */
 .cart.empty h3,
 .cart.empty p {
   text-align: center;

@@ -9,7 +9,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import './App.css';
 
-// Компонент защиты маршрута
+
 function RequireAuth({ children }) {
   const isLoggedIn = !!localStorage.getItem('user');
   return isLoggedIn ? children : <Navigate to="/login" />;
@@ -19,7 +19,6 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Шапка: Лого, Навигация, Кнопки (справа сверху) */}
         <header className="site-header">
           <div className="logo">Vespers</div>
           <nav className="main-nav">
@@ -34,7 +33,6 @@ function App() {
           </div>
         </header>
 
-        {/* Маршруты */}
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/menu" element={<Menu />} />

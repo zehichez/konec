@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const AuthForms = () => {
-  const [mode, setMode] = useState('login'); // 'login' или 'register'
+  const [mode, setMode] = useState('login'); 
   const [showForm, setShowForm] = useState(false);
 
   const handleSubmit = (e, type) => {
@@ -28,7 +28,7 @@ const AuthForms = () => {
         localStorage.setItem('user', username);
         alert('Вы вошли!');
         setShowForm(false);
-        window.location.reload(); // Перезагрузка для обновления UI
+        window.location.reload(); 
       } else {
         alert('Неверный логин или пароль');
       }

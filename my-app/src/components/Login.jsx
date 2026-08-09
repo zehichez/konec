@@ -15,7 +15,7 @@ const Login = () => {
 
     if (user) {
       localStorage.setItem('user', username);
-      navigate('/dashboard'); // Перенаправление в личный кабинет
+      navigate('/dashboard'); 
     } else {
       alert('Неверный логин или пароль');
     }

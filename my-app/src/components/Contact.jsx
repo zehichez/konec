@@ -7,7 +7,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState(null); // 'success' | 'error' | null
+  const [status, setStatus] = useState(null); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +17,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Здесь будет твой fetch к серверу, например:
-    // fetch('http://localhost:5000/contact', { method: 'POST', ... })
 
     console.log('Данные формы:', formData);
 
@@ -39,7 +37,6 @@ const Contact = () => {
         <h2>Свяжитесь с нами</h2>
 
         <div className="contact-grid">
-          {/* Блок контактов */}
           <div className="contact-info-block">
             <div className="contact-info">
               <div>
@@ -61,7 +58,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Форма обратной связи */}
           <div className="contact-form-block">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">

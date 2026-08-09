@@ -12,18 +12,18 @@ const Register = () => {
 
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     
-    // Проверка на существование пользователя
+  
     if (users.find(u => u.username === username)) {
       alert('Пользователь с таким логином уже существует');
       return;
     }
 
-    // Добавление нового пользователя
+
     users.push({ username, password });
     localStorage.setItem('users', JSON.stringify(users));
     
     alert('Регистрация успешна! Теперь войдите.');
-    navigate('/login'); // Перенаправление на страницу входа
+    navigate('/login');
   };
 
   return (
