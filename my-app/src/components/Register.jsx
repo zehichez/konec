@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './All.css'; // <-- добавлен импорт стилей
 
 const Register = () => {
   const navigate = useNavigate();
@@ -12,12 +13,10 @@ const Register = () => {
 
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     
-  
     if (users.find(u => u.username === username)) {
       alert('Пользователь с таким логином уже существует');
       return;
     }
-
 
     users.push({ username, password });
     localStorage.setItem('users', JSON.stringify(users));

@@ -114,7 +114,7 @@ const Cart = ({ cart, onRemoveItem, onClearCart, onUpdateQuantity }) => {
                   flex: 1,
                   padding: '8px',
                   border: '1px solid #ccc',
-                  background: '#f5f5f5',
+                  background: '#2c1e16',
                   borderRadius: '6px',
                   cursor: 'pointer',
                 }}

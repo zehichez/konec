@@ -102,3 +102,177 @@
   color: #888;
   margin-top: 12px;
 }
+.cart {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.cart.empty {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cart h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-name {
+  font-weight: 600;
+}
+
+.cart-quantity {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.cart-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.cart-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.cart-btn:hover {
+  background: #e0e0e0;
+}
+
+.quantity-display {
+  font-weight: 600;
+}
+
+.cart-remove {
+  background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.cart-remove:hover {
+  background: #ffe6e6;
+}
+
+.cart-total {
+  text-align: right;
+  margin: 16px 0;
+  font-size: 1.1rem;
+}
+
+.cart-checkout {
+  width: 100%;
+  padding: 14px;
+  background-color: #2c1e16;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-checkout:hover {
+  background-color: #4a332a;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.modal-text {
+  margin: 0 0 16px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cancel,
+.btn-confirm {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  border: 1px solid #ccc;
+  background: transparent;
+}
+
+.btn-confirm {
+  background: #2c1e16;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-confirm:hover {
+  background: #4a332a;
+}

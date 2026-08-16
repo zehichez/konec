@@ -7,7 +7,10 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState(null); 
+  const [status, setStatus] = useState(null); // 'error', 'success', 'pending'
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
+  const [modalType, setModalType] = useState('info'); // 'info' или 'error'
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,17 +20,39 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-    console.log('Данные формы:', formData);
-
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus('error');
-      alert('Пожалуйста, заполните все поля.');
+      setModalMessage('Пожалуйста, заполните все поля.');
+      setModalType('error');
+      setShowConfirmModal(true);
       return;
     }
 
+    setStatus('pending');
+    setModalMessage(
+      'Вы подтверждаете, что согласны на передачу ваших данных для обработки?'
+    );
+    setModalType('confirm');
+    setShowConfirmModal(true);
+  };
+
+  const handleConfirm = (confirmed) => {
+    setShowConfirmModal(false);
+
+    if (!confirmed) {
+      setStatus('error');
+      setModalMessage('Сообщение не отправлено');
+      setModalType('error');
+      setShowConfirmModal(true);
+      return;
+    }
+
+    console.log('Данные формы:', formData);
+
     setStatus('success');
-    alert('Спасибо! Ваше сообщение отправлено.');
+    setModalMessage('Мы ответим вам в течение 3 рабочих дней');
+    setModalType('info');
+    setShowConfirmModal(true);
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -105,6 +130,38 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {showConfirmModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3>{modalType === 'confirm' ? 'Подтверждение' : 'Внимание'}</h3>
+            <p>{modalMessage}</p>
+            {modalType === 'confirm' ? (
+              <div className="modal-actions">
+                <button
+                  onClick={() => handleConfirm(false)}
+                  className="btn-secondary"
+                >
+                  Нет
+                </button>
+                <button
+                  onClick={() => handleConfirm(true)}
+                  className="btn-primary"
+                >
+                  Да
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setShowConfirmModal(false)}
+                className="btn-primary"
+              >
+                OK
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

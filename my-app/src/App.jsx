@@ -9,7 +9,6 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import './App.css';
 
-
 function RequireAuth({ children }) {
   const isLoggedIn = !!localStorage.getItem('user');
   return isLoggedIn ? children : <Navigate to="/login" />;
@@ -20,13 +19,18 @@ function App() {
     <Router>
       <div className="app-container">
         <header className="site-header">
-          <div className="logo">Vespers</div>
+          {/* Vespers теперь кликабельный логотип */}
+          <Link to="/" className="logo-link">
+            <span className="logo-text">Vespers</span>
+          </Link>
+
           <nav className="main-nav">
             <Link to="/">Главная</Link>
             <Link to="/menu">Меню</Link>
             <Link to="/about">О нас</Link>
             <Link to="/contact">Контакты</Link>
           </nav>
+
           <div className="auth-container">
             <Link to="/login" className="header-btn btn-login">Войти</Link>
             <Link to="/register" className="header-btn btn-register">Регистрация</Link>
