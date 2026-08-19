@@ -43,7 +43,7 @@ const coffeeAndDrinks = [
     name: 'Какао',
     price: 150,
     desc: 'Шоколад и молоко',
-    image: 'https://jz9czo0xs6.ru.scalesta-cdn.com/2IKuC_ETZAz4z9wijYuebPHejlo=/filters:format(webp)/https://complexbar.ru/images/blog/246/pryaniy-kakao.jpg',
+    image: 'https://jz9czo0xs6.ru.scalesta-cdn.com/2IKuC_ETZAz4z9wijYuebPHejlo=/filters:format(webp)/https%3A%2F%2Fcomplexbar.ru%2Fimages%2Fblog%2F246%2Fpryaniy-kakao.jpg',
   },
 ];
 
@@ -116,12 +116,10 @@ const Menu = () => {
     setCart((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
-        // Увеличиваем количество, если товар уже есть
         return prev.map((i) =>
           i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         );
       }
-      // Иначе добавляем новый товар с количеством 1
       return [...prev, { ...item, quantity: 1 }];
     });
   };
